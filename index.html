@@ -609,5 +609,39 @@
         section { margin: 20px 0; }
         footer { text-align: center; padding: 20px; background: #f4f4f4; }
     </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Runner</title>
+</head>
+<body>
+    <h1>Database Runner for Ticketing System</h1>
+    <script>
+        class DatabaseRunner {
+            constructor() {
+                // Simulate a database with an array of ticket objects
+                this.ticketDatabase = [];
+            }
+
+            addTicket(ticket) {
+                this.ticketDatabase.push(ticket);
+            }
+
+            searchById(id) {
+                return this.ticketDatabase.find(ticket => ticket.id === id);
+            }
+        }
+
+        // Example usage
+        const dbRunner = new DatabaseRunner();
+        dbRunner.addTicket({ id: 1, event: 'Concert', price: 100 });
+        dbRunner.addTicket({ id: 2, event: 'Theater', price: 50 });
+
+        const searchResult = dbRunner.searchById(1);
+        console.log(searchResult);  // Output: { id: 1, event: 'Concert', price: 100 }
+    </script>
 </body>
 </html>
+
