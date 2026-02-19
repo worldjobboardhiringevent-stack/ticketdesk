@@ -3,498 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Job Board Hiring Event Ticket Management System</title>
+    <title>User Login & Registration</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        header h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        nav ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        nav a {
-            display: block;
-            padding: 15px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-align: center;
-            font-weight: 600;
-        }
-        nav a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        .feature-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            border-left: 5px solid #667eea;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95em;
-        }
-        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .section {
-            display: none;
-        }
-        .section.active {
-            display: block;
-        }
-        .section-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        .section-content h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2em;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 15px;
-        }
-        .section-content p {
-            color: #666;
-            line-height: 1.8;
-            font-size: 1.05em;
-            margin-bottom: 15px;
-        }
-        button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        footer {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            color: #666;
-            margin-top: 40px;
-        }
-        .back-button {
-            background: #764ba2;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎫 World Job Board Hiring Event Advanced Ticket Management System</h1>
-            <p>Professional Support Ticket Management & Help Desk Solution</p>
-        </header>
-
-        <!-- Main Menu Navigation -->
-        <nav id="main-menu">
+    <header>
+        <nav>
             <ul>
-                <li><a href="#" onclick="showSection('dashboard')">📊 Dashboard</a></li>
-                <li><a href="#" onclick="showSection('ticket-management')">🎫 Ticket Management</a></li>
-                <li><a href="#" onclick="showSection('agent-management')">👥 Agent Management</a></li>
-                <li><a href="#" onclick="showSection('agent-groups')">👨‍💼 Agent Groups</a></li>
-                <li><a href="#" onclick="showSection('ticket-topics')">📂 Ticket Topics</a></li>
-                <li><a href="#" onclick="showSection('automation')">⚙️ Automation</a></li>
-                <li><a href="#" onclick="showSection('feedback')">⭐ Feedback Module</a></li>
-                <li><a href="#" onclick="showSection('notifications')">📧 Notifications</a></li>
-                <li><a href="#" onclick="showSection('user-management')">🔐 User Management</a></li>
-                <li><a href="#" onclick="showSection('email-integration')">✉️ Email Integration</a></li>
-                <li><a href="#" onclick="showSection('faq')">❓ FAQ Module</a></li>
-                <li><a href="#" onclick="showSection('settings')">⚙️ Settings</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#reset-password">Reset Password</a></li>
+                <li><a href="#ticket-management">Ticket Management</a></li>
             </ul>
         </nav>
+    </header>
 
-        <!-- Featured Features -->
-        <div class="features-grid" id="dashboard">
-            <div class="feature-card">
-                <div class="feature-icon">🎫</div>
-                <h3>Advanced Ticket Management</h3>
-                <p>Manage your client's support requests like a pro using this ticket management system. This plugin is built in a manner that any company regardless of how small or big can use it.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Unlimited Agent Accounts</h3>
-                <p>Create unlimited number of agents, Agent administrators and agent groups without any restrictions and extra expenses. No need to pay on per agent basis to all the expensive help desk services.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Graphical Representation</h3>
-                <p>Represent all the reports and data graphically and analyse your services like a pro. Various statistics regarding tickets, agents, groups, feedbacks, ratings, clients etc. can be viewed graphically.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👨‍💼</div>
-                <h3>Agent Groups Management</h3>
-                <p>Manage your agents by creating agent groups. Agent Groups can be mapped with ticket topics. Tickets can be assigned to agent groups or group admins for easier ticket allocation and department organization.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⭐</div>
-                <h3>User Feedback Module</h3>
-                <p>Once a ticket is solved, send a email to your user asking for feedback on the support received. The user can leave a rating and feedback comment to improve your service quality.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📧</div>
-                <h3>Email Notifications</h3>
-                <p>Various email notifications are sent directly from the plugin at various stages of ticket. Email notifications are sent both to site admin and ticket creator. All emails can be configured from settings.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h3>Automatic Agent Assignment</h3>
-                <p>Automatically assign agents as soon as tickets are created. Agents can be assigned using various methods: round-robin, lowest load, or based on ticket topics and agent groups.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔐</div>
-                <h3>User Login & Registration</h3>
-                <p>Any user can register, login and reset password from your website. Proper email verification is done before activating user accounts. Clients and agents can manage their tickets after login.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📂</div>
-                <h3>Multi-Level Ticket Topics</h3>
-                <p>All tickets are categorized by topics. Create topics in multi-level hierarchy. Topics can be mapped with agent groups for intelligent auto-assignment of tickets.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🗣️</div>
-                <h3>Multilingual & Translation Ready</h3>
-                <p>This plugin can be translated into any language. Proper translation files in .po and .mo format are included in the package for easy localization.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌐</div>
-                <h3>Multisite Compatible</h3>
-                <p>This plugin is fully multisite compatible. It can be installed individually on each site on your WordPress multisite network without conflicts.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">✉️</div>
-                <h3>Email & IMAP Integration</h3>
-                <p>Clients can reply directly from their email account. Ticket replies can be done from the site or email. IMAP settings are configured, and email attachments are stored with comments.</p>
-            </div>
-        </div>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
 
-        <!-- Detailed Sections -->
-        
-        <!-- Ticket Management Section -->
-        <div id="ticket-management" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>🎫 Advanced Ticket Management</h2>
-                <p>Our comprehensive ticket management system is designed to handle support requests from companies of any size. Whether you're a small startup or a large enterprise, this system scales to meet your needs.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Key Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Create and manage unlimited support tickets</li>
-                    <li>✓ Detailed ticket tracking and history</li>
-                    <li>✓ Priority-based ticket organization</li>
-                    <li>✓ Advanced search and filtering capabilities</li>
-                    <li>✓ Customizable ticket statuses and workflows</li>
-                    <li>✓ Full audit trail of all ticket activities</li>
-                    <li>✓ Bulk operations for efficient management</li>
-                </ul>
-            </div>
-        </div>
+        <section id="register">
+            <h2>Register</h2>
+            <form action="#" method="post">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
 
-        <!-- Agent Management Section -->
-        <div id="agent-management" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>👥 Agent Management</h2>
-                <p>Create and manage unlimited agent accounts without any restrictions or extra costs. Unlike expensive help desk services that charge per agent, our system allows you to create as many agents as you need.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Agent Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Unlimited agent account creation</li>
-                    <li>✓ Agent Administrators for delegation</li>
-                    <li>✓ Role-based access control</li>
-                    <li>✓ Individual agent performance tracking</li>
-                    <li>✓ Agent availability status</li>
-                    <li>✓ Custom permission settings</li>
-                    <li>✓ Agent workload management</li>
-                </ul>
-            </div>
-        </div>
+        <section id="reset-password">
+            <h2>Reset Password</h2>
+            <form action="#" method="post">
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" name="email" required>
+                <button type="submit">Send Password Reset Link</button>
+            </form>
+        </section>
 
-        <!-- Agent Groups Section -->
-        <div id="agent-groups" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>👨‍💼 Create & Manage Agent Groups</h2>
-                <p>Organize your support team by creating agent groups. Map these groups with ticket topics for intelligent ticket routing and faster resolution times. Create groups for different departments like Sales, Technical Support, Billing, etc.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Group Management Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Create unlimited agent groups</li>
-                    <li>✓ Department-based organization</li>
-                    <li>✓ Group admin assignment</li>
-                    <li>✓ Map groups with ticket topics</li>
-                    <li>✓ Assign tickets to groups automatically</li>
-                    <li>✓ Team performance analytics</li>
-                    <li>✓ Flexible group membership management</li>
-                </ul>
-            </div>
-        </div>
+        <section id="ticket-management">
+            <h2>Ticket Management</h2>
+            <p>Here you can manage your tickets.</p>
+            <!-- Client/Agent specific management will go here -->
+        </section>
+    </main>
 
-        <!-- Ticket Topics Section -->
-        <div id="ticket-topics" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>📂 Multi-Level Ticket Topics</h2>
-                <p>Organize tickets with a multi-level hierarchical topic structure. All tickets are automatically categorized by topic, which can then be mapped with agent groups for intelligent auto-assignment based on expertise.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Topic Management Benefits:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Create hierarchical topic structures</li>
-                    <li>✓ Parent-child topic relationships</li>
-                    <li>✓ Map topics with agent groups</li>
-                    <li>✓ Auto-assign tickets based on topics</li>
-                    <li>✓ Fast and accurate ticket routing</li>
-                    <li>✓ Customizable topic descriptions</li>
-                    <li>✓ Easy topic reorganization</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Automation Section -->
-        <div id="automation" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>⚙️ Automatic Agent Assignment & Auto-Close Tickets</h2>
-                <p>Save time and reduce manual work with intelligent automation. Automatically assign agents as soon as tickets are created and automatically close solved tickets after a configured period.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Automation Options:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Round-robin assignment (equal distribution)</li>
-                    <li>✓ Assign to agent with lowest load</li>
-                    <li>✓ Assign based on ticket topic</li>
-                    <li>✓ Assign to specific agent groups</li>
-                    <li>✓ Automatic ticket closure after configured time</li>
-                    <li>✓ Customizable automation rules</li>
-                    <li>✓ Save significant time and improve efficiency</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Feedback Section -->
-        <div id="feedback" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>⭐ User Feedback Module</h2>
-                <p>Gather valuable customer feedback once tickets are resolved. Send automated emails to customers asking for their feedback, ratings, and comments. Continuously improve your service based on real customer input.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Feedback Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Automated feedback email sending</li>
-                    <li>✓ Star rating system</li>
-                    <li>✓ Comment feedback collection</li>
-                    <li>✓ Feedback analytics and reports</li>
-                    <li>✓ Customizable feedback forms</li>
-                    <li>✓ Track agent performance via ratings</li>
-                    <li>✓ Improve service quality continuously</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Notifications Section -->
-        <div id="notifications" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>📧 Email Notifications</h2>
-                <p>Stay informed with comprehensive email notifications sent at various stages of ticket lifecycle. Both site administrators and ticket creators receive notifications. All email templates and settings are fully configurable.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Notification Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Ticket creation notifications</li>
-                    <li>✓ Ticket assignment alerts</li>
-                    <li>✓ Reply and comment notifications</li>
-                    <li>✓ Ticket status change alerts</li>
-                    <li>✓ Closure notifications</li>
-                    <li>✓ Customizable email templates</li>
-                    <li>✓ Admin and user notification preferences</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- User Management Section -->
-        <div id="user-management" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>🔐 User Login & Registration Module</h2>
-                <p>Provide secure user authentication with complete login, registration, and password reset functionality. Email verification ensures only legitimate users can access the system.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">User Management Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ User registration system</li>
-                    <li>✓ Email verification before activation</li>
-                    <li>✓ Secure login system</li>
-                    <li>✓ Password reset functionality</li>
-                    <li>✓ Multiple user roles (Client, Agent, Admin)</li>
-                    <li>✓ User profile management</li>
-                    <li>✓ Agent group admin roles</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Email Integration Section -->
-        <div id="email-integration" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>✉️ Email Integration & IMAP Configuration</h2>
-                <p>Allow clients to reply to tickets directly from their email accounts. IMAP integration automatically fetches email replies and attachments, converting them to ticket comments. This seamless integration eliminates the need for clients to visit the website to respond.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Email Integration Benefits:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Direct email reply handling</li>
-                    <li>✓ IMAP configuration securely</li>
-                    <li>✓ Automatic email fetching</li>
-                    <li>✓ Email attachment storage</li>
-                    <li>✓ Attachment management</li>
-                    <li>✓ Client convenience</li>
-                    <li>✓ Automatic comment creation from emails</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <div id="faq" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>❓ Frequently Asked Questions (FAQ) Module</h2>
-                <p>Reduce support burden with an integrated FAQ module. Customers can search for answers before creating tickets. If they don't find what they're looking for, they can easily create a new ticket from the FAQ section.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">FAQ Features:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Create and manage FAQ questions</li>
-                    <li>✓ Organized FAQ categories</li>
-                    <li>✓ Easy-to-find answers</li>
-                    <li>✓ Search functionality</li>
-                    <li>✓ Create ticket from FAQ</li>
-                    <li>✓ Display on website</li>
-                    <li>✓ Reduce support tickets</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Settings Section -->
-        <div id="settings" class="section">
-            <button class="back-button" onclick="showSection('dashboard')">← Back to Dashboard</button>
-            <div class="section-content">
-                <h2>⚙️ System Settings & Configuration</h2>
-                <p>Fully customize the ticket management system with comprehensive settings panel. Configure all features, email notifications, automation rules, and preferences to match your business requirements.</p>
-                <h3 style="color: #667eea; margin-top: 25px;">Configuration Options:</h3>
-                <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
-                    <li>✓ Email notification templates</li>
-                    <li>✓ Automation rule configuration</li>
-                    <li>✓ IMAP settings</li>
-                    <li>✓ Ticket auto-close duration</li>
-                    <li>✓ User role permissions</li>
-                    <li>✓ Language & localization</li>
-                    <li>✓ System preferences</li>
-                </ul>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Advanced Ticket Management System | Professional Support Desk Solution | <a href="#" style="color: #667eea; text-decoration: none; font-weight: 600;">Documentation</a> | <a href="#" style="color: #667eea; text-decoration: none; font-weight: 600;">Support</a></p>
-        </footer>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Hide features grid for non-dashboard
-            const dashboard = document.getElementById('dashboard');
-            if (sectionId !== 'dashboard') {
-                dashboard.classList.remove('active');
-            } else {
-                dashboard.classList.add('active');
-            }
-
-            // Show selected section
-            if (sectionId !== 'dashboard') {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    section.classList.add('active');
-                    window.scrollTo(0, 0);
-                }
-            } else {
-                dashboard.classList.add('active');
-                window.scrollTo(0, 0);
-            }
-        }
-
-        // Initialize dashboard on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const dashboard = document.getElementById('dashboard');
-            if (dashboard) {
-                dashboard.classList.add('active');
-            }
-        });
-    </script>
+    <footer>
+        <p>&copy; 2026 User Management System</p>
+    </footer>
 </body>
 </html>
