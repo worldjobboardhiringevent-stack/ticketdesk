@@ -717,5 +717,67 @@
         section { margin: 20px 0; }
         footer { text-align: center; padding: 20px; background: #f4f4f4; }
     </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login & Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#reset-password">Reset Password</a></li>
+                <li><a href="#ticket-management">Ticket Management</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form action="#" method="post">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="reset-password">
+            <h2>Reset Password</h2>
+            <form action="#" method="post">
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" name="email" required>
+                <button type="submit">Send Password Reset Link</button>
+            </form>
+        </section>
+
+        <section id="ticket-management">
+            <h2>Ticket Management</h2>
+            <p>Here you can manage your tickets.</p>
+            <!-- Client/Agent specific management will go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 User Management System</p>
+    </footer>
 </body>
 </html>
