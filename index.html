@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ticket Management System</h1>
+    </header>
+    <main>
+        <section id="create-ticket">
+            <h2>Create Ticket</h2>
+            <form id="ticket-form">
+                <label for="title">Ticket Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <button type="submit">Create Ticket</button>
+            </form>
+        </section>
+        <section id="view-tickets">
+            <h2>View Tickets</h2>
+            <ul id="ticket-list">
+                <!-- Tickets will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ticket Management System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
